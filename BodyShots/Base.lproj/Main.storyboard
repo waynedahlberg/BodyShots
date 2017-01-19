@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hDr-TH-Qxe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hDr-TH-Qxe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <scene sceneID="Oj2-2F-Oc0">
             <objects>
                 <collectionViewController id="kE6-fN-SkX" customClass="GridViewController" customModule="BodyShots" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zLb-dX-DaH">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="zLb-dX-DaH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,7 +31,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yEp-yG-NAS">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yEp-yG-NAS">
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                         </imageView>
                                     </subviews>
@@ -52,11 +52,74 @@
                             <outlet property="delegate" destination="kE6-fN-SkX" id="5p5-4k-ahU"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Shots" image="icon_tabbar_grid" id="jSc-W6-Pvy"/>
                     <navigationItem key="navigationItem" title="Shots" id="rS6-QK-55e"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ege-pF-tf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="-376"/>
+            <point key="canvasLocation" x="2026" y="-376"/>
+        </scene>
+        <!--Video-->
+        <scene sceneID="5I9-BH-wQW">
+            <objects>
+                <viewController id="Ejr-yn-Na9" customClass="SettingsViewController" customModule="BodyShots" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wtZ-Qw-gVb"/>
+                        <viewControllerLayoutGuide type="bottom" id="RWo-tr-h8c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e7t-K8-59W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ow-X5-jIy">
+                                <rect key="frame" x="148.5" y="317" width="78" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1008747965" green="0.56007498499999997" blue="0.2133789361" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Ow-X5-jIy" firstAttribute="centerY" secondItem="e7t-K8-59W" secondAttribute="centerY" id="Qqz-1N-Bxg"/>
+                            <constraint firstItem="3Ow-X5-jIy" firstAttribute="centerX" secondItem="e7t-K8-59W" secondAttribute="centerX" id="iBb-aq-VQu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="icon_tabbar_video" id="A2F-kh-sOl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6un-RO-m6J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1463" y="450"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="p5b-zl-Xdw">
+            <objects>
+                <viewController id="aAi-Qm-uPE" customClass="VideoViewController" customModule="BodyShots" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Cn-NG-IHG"/>
+                        <viewControllerLayoutGuide type="bottom" id="8eQ-MY-qeU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2dv-Tr-9n7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwW-xb-OxW">
+                                <rect key="frame" x="131.5" y="317" width="112" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xwW-xb-OxW" firstAttribute="centerX" secondItem="2dv-Tr-9n7" secondAttribute="centerX" id="Vum-pg-Yah"/>
+                            <constraint firstItem="xwW-xb-OxW" firstAttribute="centerY" secondItem="2dv-Tr-9n7" secondAttribute="centerY" id="v65-lD-C4o"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icon_tabbar_settings" id="3GU-KE-MdC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOA-RG-ejM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2214" y="449"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W44-1j-ajF">
@@ -69,12 +132,37 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="kE6-fN-SkX" kind="relationship" relationship="rootViewController" id="SrC-cx-VGB"/>
+                        <segue destination="3zI-dg-npZ" kind="relationship" relationship="rootViewController" id="SrC-cx-VGB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZz-dN-gB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="340" y="-376.46176911544228"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3Ou-UF-ziR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3zI-dg-npZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6F5-0C-2zt"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="hUK-Ue-1bb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="kE6-fN-SkX" kind="relationship" relationship="viewControllers" id="Hhq-Qg-Ine"/>
+                        <segue destination="Ejr-yn-Na9" kind="relationship" relationship="viewControllers" id="Eav-o5-ap2"/>
+                        <segue destination="aAi-Qm-uPE" kind="relationship" relationship="viewControllers" id="KsO-M0-NGx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vzb-kt-ENX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1133.5999999999999" y="-376.46176911544228"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="icon_tabbar_grid" width="24" height="24"/>
+        <image name="icon_tabbar_settings" width="24" height="24"/>
+        <image name="icon_tabbar_video" width="24" height="24"/>
+    </resources>
 </document>

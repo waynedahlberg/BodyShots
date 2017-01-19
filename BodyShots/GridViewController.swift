@@ -15,7 +15,8 @@ class GridViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.collectionView?.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
+        
     }
 
 
@@ -31,10 +32,14 @@ class GridViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+   
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GridCollectionViewCell
-    
-        // Configure the cell
-        cell.gridImageView.image = UIImage(named: model.posts[indexPath.row]["photoName"]!)
+        
+        if indexPath.row == 0 {
+            cell.gridImageView.image = UIImage(named: "cell_button_add")
+        } else {
+            cell.gridImageView.image = UIImage(named: model.posts[indexPath.row]["photoName"]!)
+        }
     
         return cell
     }
