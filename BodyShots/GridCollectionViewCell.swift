@@ -10,5 +10,7 @@ import UIKit
 
 class GridCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var gridImageView: UIImageView!
+  @IBOutlet var imageView: UIImageView!
+  @IBOutlet weak var dateLabel: UILabel!
+  
 }

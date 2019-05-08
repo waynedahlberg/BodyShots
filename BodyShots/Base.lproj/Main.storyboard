@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hDr-TH-Qxe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hDr-TH-Qxe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +13,7 @@
         <scene sceneID="Oj2-2F-Oc0">
             <objects>
                 <collectionViewController id="kE6-fN-SkX" customClass="GridViewController" customModule="BodyShots" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="zLb-dX-DaH">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="zLb-dX-DaH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,19 +31,39 @@
                                     <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yEp-yG-NAS">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dude" translatesAutoresizingMaskIntoConstraints="NO" id="yEp-yG-NAS">
                                             <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                         </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radialScrim" translatesAutoresizingMaskIntoConstraints="NO" id="oLU-RO-5Xd">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asU-Ic-1z1">
+                                            <rect key="frame" x="84.5" y="85" width="32.5" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="fn2-b9-RUt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="yEp-yG-NAS" secondAttribute="trailing" id="4fD-c0-0Ic"/>
+                                    <constraint firstItem="oLU-RO-5Xd" firstAttribute="top" secondItem="hlH-os-KIv" secondAttribute="top" id="6oF-JC-B5F"/>
+                                    <constraint firstAttribute="bottom" secondItem="asU-Ic-1z1" secondAttribute="bottom" constant="8" id="B77-kd-pND"/>
+                                    <constraint firstAttribute="trailing" secondItem="oLU-RO-5Xd" secondAttribute="trailing" id="GPg-jm-09T"/>
+                                    <constraint firstItem="asU-Ic-1z1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hlH-os-KIv" secondAttribute="leading" symbolic="YES" id="IDv-YB-8Nd"/>
                                     <constraint firstItem="yEp-yG-NAS" firstAttribute="leading" secondItem="hlH-os-KIv" secondAttribute="leading" id="RQo-DS-wBm"/>
                                     <constraint firstAttribute="bottom" secondItem="yEp-yG-NAS" secondAttribute="bottom" id="UeQ-aS-Na7"/>
+                                    <constraint firstItem="oLU-RO-5Xd" firstAttribute="leading" secondItem="hlH-os-KIv" secondAttribute="leading" id="hhf-9W-qHU"/>
                                     <constraint firstItem="yEp-yG-NAS" firstAttribute="top" secondItem="hlH-os-KIv" secondAttribute="top" id="pm8-Zw-wXS"/>
+                                    <constraint firstAttribute="bottom" secondItem="oLU-RO-5Xd" secondAttribute="bottom" id="wbk-bp-elJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="asU-Ic-1z1" secondAttribute="trailing" constant="8" id="xbh-hL-mHr"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="gridImageView" destination="yEp-yG-NAS" id="4qn-MR-ERg"/>
+                                    <outlet property="dateLabel" destination="asU-Ic-1z1" id="f4g-Xa-Oqi"/>
+                                    <outlet property="imageView" destination="yEp-yG-NAS" id="cwW-Ze-4FA"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -57,7 +77,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ege-pF-tf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2026" y="-376"/>
+            <point key="canvasLocation" x="2024.8" y="-376.46176911544228"/>
         </scene>
         <!--Video-->
         <scene sceneID="5I9-BH-wQW">
@@ -72,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ow-X5-jIy">
-                                <rect key="frame" x="148.5" y="317" width="78" height="34"/>
+                                <rect key="frame" x="149.5" y="316.5" width="76" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -103,7 +123,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwW-xb-OxW">
-                                <rect key="frame" x="131.5" y="317" width="112" height="34"/>
+                                <rect key="frame" x="132.5" y="316.5" width="110" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -127,7 +147,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hDr-TH-Qxe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="97M-aJ-PJi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -146,6 +166,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6F5-0C-2zt"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="hUK-Ue-1bb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -161,8 +182,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dude" width="125" height="125"/>
         <image name="icon_tabbar_grid" width="24" height="24"/>
         <image name="icon_tabbar_settings" width="24" height="24"/>
         <image name="icon_tabbar_video" width="24" height="24"/>
+        <image name="radialScrim" width="125" height="125"/>
     </resources>
 </document>

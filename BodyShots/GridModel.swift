@@ -7,6 +7,18 @@
 //
 
 import Foundation
+import UIKit
+
+class Post: NSObject {
+  var postImage = UIImageView()
+  var dateNumber = Int()
+  
+  init(postImage: UIImageView, dateNumber: Int) {
+    self.postImage = postImage
+    self.dateNumber = dateNumber
+  }
+}
+
 
 let model = Model()
 
